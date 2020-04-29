@@ -1,2 +1,2 @@
 # Project name
-PlayS me https://bravoarturo.github.io/FOUR-IN-LINE-REPOSITORY/
+PlayS me https://bravoarturo.github.io/fourInLine/
