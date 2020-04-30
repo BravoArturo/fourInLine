@@ -28,7 +28,7 @@ body{
 }
 #bot{
     display: flex;
-    flex-direction: column; /*esto es para darle ubicacion, va siempre en el padre*/
+    flex-direction: column;/*this is to give to my column a correct ubication. It always be in the father container*/
     height: 20%;
     width: 100%;
    /* border: 1px solid red;*/
