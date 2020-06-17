@@ -41,7 +41,7 @@ body{
     background: #00AAD4;
     border-radius: 40px 0px 0px 0px;
 }
-#medium{
+.board{
     display: flex;
     height: 100%;
     width: 80%;
@@ -70,7 +70,7 @@ body{
    /* border: 1px dashed green;*/
     background: white;
 }
-.column{
+.board .column{
     display: flex;
    justify-content: space-evenly;
    flex-direction: column;
@@ -78,17 +78,23 @@ body{
     width: 14%;
     height: 100%;
 }
-.row{
+.board .column .row{
     display: flex;
     height: 40px;
     justify-content: center;
     align-items: center;
     width: 40px;
-    background: white;
+    background-color: white;
     border-radius: 50%;
 }
+.board .column .row.red{
+    background-color: red;
+}
+.board .column .row.yellow{
+    background-color: yellow;
+}
 .column:hover{
-    background: greenyellow;
+    background:wheat;
     cursor: pointer;
 }
 #you, #ai{
