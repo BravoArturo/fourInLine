@@ -5,6 +5,16 @@ var playerOne = localStorage.getItem("playerOne");
 var playerTwo = localStorage.getItem("playerTwo");
 var turn2 = null;
 var turn = null;
+var counterP1 = null;
+var counterP2 = null;
+var hour1 = 0;
+var min1 = 0;
+var sec1 = 0;
+var hour2 = 0;
+var min2 = 0;
+var sec2 = 0;
+var c1 = false;
+var c2 = false;
 var board = [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -25,24 +35,56 @@ var redirect = function() {
     redirect.onclick = redirect2;
 }
 
+counter1 = function() {
+    counterP1 = document.getElementById('counterP1');
+    if (turn === 'yellow'){
+    if (sec1 < 59){
+        sec1++;
+    }else if (sec1 == 59){
+        sec1=0;
+        min1++;
+    }else if (sec1 == 59 && min1==59){
+        sec1=0;
+        min1=0;
+        hour1++;
+    }
+}
+    counterP1.innerHTML = hour1+":"+min1+":"+sec1;
+}
+
+counter2 = function() {
+    counterP2 = document.getElementById('counterP2');
+    if (turn === 'red'){
+    if (sec2 < 59){
+        sec2++;
+    }else if (sec2 == 59){
+        sec2=0;
+        min2++;
+    }else if (sec2 == 59 && min2==59){
+        sec2=0;
+        min2=0;
+        hour2++;
+    }
+}
+    counterP2.innerHTML = hour2+":"+min2+":"+sec2;
+}
+      
 var changeNameTurn = function() {
     turnp1 = document.getElementById('tyou');
     turnp2 = document.getElementById('tai');
     if (turn === 'yellow'){
         turn2 = playerOne;
-        turnp1.innerHTML = "es tu turno " + playerOne;
+        turnp1.innerHTML = "Es tu turno " + playerOne;
         turnp2.innerHTML = playerTwo;
-    }else{
+    }else if (turn === 'red'){
         turn2 = playerTwo;
-        turnp2.innerHTML = "es tu turno " + playerTwo;
+        turnp2.innerHTML = "Es tu turno " + playerTwo;
         turnp1.innerHTML = playerOne;
     }
-
 }
 
 var toggleTurn = function() {
     turn = (turn === 'yellow') ? 'red' : 'yellow';
-
 }
 
 var columnEventHandler = function(evt) {
@@ -86,6 +128,9 @@ var init = function() {
     render(); 
     changeNameTurn();
     redirect();
+    setInterval(counter2, 1000);
+    setInterval(counter1, 1000);
+    turn = 'red';
 }
 
 window.onload = init;
