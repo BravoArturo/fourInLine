@@ -1,4 +1,3 @@
-console.log(localStorage.getItem("gameName"));
 var save = function(){
     var game = {
         playerOneL: playerOne,

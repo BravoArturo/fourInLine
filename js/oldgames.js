@@ -1,4 +1,7 @@
 var list = null;
+var nameGame = null;
+var games = null;
+
 acceptButton = function() {
     location.href="game.html";
 }
@@ -15,14 +18,14 @@ var render = function() {
     let html = '';
     for (let i = 0; i < localStorage.length; i++){
         if (localStorage.key(i).includes('Game:') == true){
-            let games = localStorage.key(i);
-            html += '<div id="l'+i+'"> </div>'+ games +
-            '<button class="button" onclick="acceptButton()">Accept</button>'+
-            '<br></br>';
+            games = localStorage.key(i);
+            html +='<div><input type="radio" id="l'+i+'" value="'+games+'">'+
+            '<label for="l'+i+'">'+games+'</label></div>';
         }
     }
     list.innerHTML = html;
 }
+
 var init = function() {
     getElements();
     render();
