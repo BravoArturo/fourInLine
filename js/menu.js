@@ -48,6 +48,7 @@ getElements = function() {
 
 var init = function() {
     getElements();
+    localStorage.setItem("load", null);
 }
 
 window.onload = init;

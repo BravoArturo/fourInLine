@@ -12,6 +12,9 @@ var sec1 = 0;
 var hour2 = 0;
 var min2 = 0;
 var sec2 = 0;
+var estado = "No hay ganador";
+var gamesSaved = null;
+var load = localStorage.getItem("load");
 var board = [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -22,6 +25,19 @@ var board = [
     [null, null, null, null, null, null]
 ];
 
+var loadGame = function() {
+    gamesSaved = JSON.parse(localStorage[localStorage.getItem("currentButton")]);
+    playerOne = gamesSaved.playerOneL;
+    hour1 = gamesSaved.hour1L;
+    min1 = gamesSaved.min1L;
+    sec1 = gamesSaved.sec1L;
+    hour2 = gamesSaved.hour2L;
+    min2 = gamesSaved.min2L;
+    sec2 = gamesSaved.sec2L;
+    board = gamesSaved.boardL;
+    estado = gamesSaved.estadoL;
+    playerTwo = gamesSaved.playerTwoL;
+}
 
 var reset = function(){
     location.href="game.html";
@@ -112,8 +128,10 @@ var bindColumnHandlers = function() {
 var winner = function() {
     if (turn === 'red'){
         alert("El ganador es " + playerTwo);
+        estado = "El ganador fue: " + playerTwo;
     }else{
         alert("El ganador es " + playerOne);
+        estado = "El ganador fue: " + playerOne;
     } 
 }
 
@@ -189,6 +207,9 @@ var render = function() {
 var init = function() {
     boardHTML = document.getElementById('board');
     turn = Math.random() > 0.5 ? ' yellow' : ' red';
+    if (load==="si"){
+        loadGame();
+    }
     render(); 
     changeNameTurn();
     redirect();

@@ -8,7 +8,8 @@ var save = function(){
         hour2L: hour2,
         min2L: min2,
         sec2L: sec2,
-        boardL: board 
+        boardL: board, 
+        estadoL: estado  
     }
     localStorage.setItem("Game: " + localStorage.getItem("gameName"), JSON.stringify(game));
     console.log(game);
