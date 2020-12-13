@@ -3,7 +3,19 @@ body{
     justify-content: center;
     align-items: center;
     background-image: url("../img/icon.jpg");
+    background-size:cover;
     
+}
+
+#oldGames {
+    width: 86vh;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 #container {
     display : flex;
@@ -59,7 +71,10 @@ body{
     display: flex;
     height: 80%;
     width: 100%;
-    background: white;
+    background: black;
+}
+.alingCounter{
+    color: wheat;
 }
 .board .column{
     display: flex;
@@ -75,7 +90,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 40px;
-    background-color: white;
+    background-color: black;
     border-radius: 50%;
 }
 .board .column .row.red{
@@ -104,17 +119,16 @@ body{
     width: 20%;
 }
 .circle{
-    background: red;
     height: 40px;
     width: 40px;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
-    background: #ff6447;
+    background: yellow;
 
 }
 .yellow{
-    background: #FFCC00;
+    background: red;
 }
 #go {
     font-weight: bold;
@@ -132,7 +146,7 @@ body{
     padding: 10px 8px 5px 5px;
     margin: 0 0 4px 30px;
   }
-  #go:before {
+#go:before {
     content: "";
     position: absolute;
     top: 0;
@@ -143,6 +157,16 @@ body{
     border-right: 18px solid #ffcc00;
     border-bottom: 18px solid transparent;
   }
+.button {
+    border-radius: 40px;
+    border: 0.5px;
+    background-color: #00AAD4;
+    color: white;
+}
+.input {
+    border-radius: 5px;
+    border: 0.5px;
+}
 @media (max-width: 500px){
     #main {
         height: 300px;

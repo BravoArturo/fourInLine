@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href = "css/styles.css">
     <script type="text/javascript" src="js/menu.js"></script>
     <title>Prueba</title>
 </head>
 <body>
-        <div class="inputs">
-            <label for="player1Input" class="formLabel">Player 1</label>
-            <input type="text" class="formInput" id="player1Input">
-            <label for="player2Input" class="formLabel">Player 2</label>
-            <input type="text" class="formInput" id="player2Input">
-            <button id="accept" class="formSubmit" onclick="validateForm()">Accept</button>
+    <div class="wrapper">
+        <div class="container">
+            <div class="inputs">
+                <label for="player1Input" class="label">Player 1</label>
+                <input type="text" class="input" id="player1Input">
+                <label for="player2Input" class="label">Player 2</label>
+                <input type="text" class="input" id="player2Input">
+                <button id="accept" onclick="validateForm()" class="button">Accept</button>
+            </div>
         </div>
+        <div class="list">
+            <button class="button" id="oldGames">See old games</button>
+        </div>
+    </div>
 </body>
 </html>

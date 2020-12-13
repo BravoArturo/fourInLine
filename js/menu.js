@@ -13,6 +13,12 @@ validateForm = function() {
     if (player2.value === ""){
         alert("Debe ingresar player 2");
     }
+    if (player1.value.length < 3){
+        alert("El player 1 debe contener al menos 3 caracteres");
+    }
+    if (player2.value.length < 3){
+        alert("El player 2 debe contener al menos 3 caracteres");
+    }
     else {
         playerOne = player1.value;
         playerTwo = player2.value;

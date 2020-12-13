@@ -25,6 +25,12 @@ var board = [
     [null, null, null, null, null, null]
 ];
 
+var save = function(){
+    console.log(board);
+}
+var reset = function(){
+    location.href="game.html";
+}
 
 var redirect2 = function() {
     location.href="index.html";
