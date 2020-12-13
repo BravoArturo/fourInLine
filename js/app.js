@@ -1,6 +1,8 @@
 console.log('hola mundo');
 var boardHTML = null;
 var columnsHTML = null;
+var playerOne;
+var playerTwo;
 var playerOne = localStorage.getItem("playerOne");
 var playerTwo = localStorage.getItem("playerTwo");
 var turn2 = null;
@@ -13,8 +15,6 @@ var sec1 = 0;
 var hour2 = 0;
 var min2 = 0;
 var sec2 = 0;
-var c1 = false;
-var c2 = false;
 var board = [
     [null, null, null, null, null, null],
     [null, null, null, null, null, null],
@@ -25,9 +25,6 @@ var board = [
     [null, null, null, null, null, null]
 ];
 
-var save = function(){
-    console.log(board);
-}
 var reset = function(){
     location.href="game.html";
 }

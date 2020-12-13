@@ -167,6 +167,10 @@ body{
     border-radius: 5px;
     border: 0.5px;
 }
+.oldGamesButton {
+    display: flex;
+    flex-direction: row;
+}
 @media (max-width: 500px){
     #main {
         height: 300px;
