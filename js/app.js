@@ -93,9 +93,10 @@ var columnEventHandler = function(evt) {
     for (var i = 0; i < board[columnId].length; i++) {
         if (!board[columnId][i]) {
             board[columnId][i] = turn; //si encuentro uno vacio relleno con el turno actual.
-            toggleTurn();
             changeNameTurn();
             render();
+            checkWin();
+            toggleTurn();
             break; 
         }
     }
@@ -106,6 +107,68 @@ var bindColumnHandlers = function() {
     for (var i = 0; i < columnsHTML.length; i++){
     columnsHTML[i].onclick = columnEventHandler; //le agrega a todas las columnas el evento onclick.
 }   
+}
+
+var winner = function() {
+    if (turn === 'red'){
+        alert("El ganador es " + playerTwo);
+    }else{
+        alert("El ganador es " + playerOne);
+    } 
+}
+
+var checkWin = function () {
+    for (var i = 0; i < board.length; i++) {
+        for (var j = 0; j < 4; j++) {
+            if (board[i][j]) {
+                if (board[i][j] === (board[i][j + 1]) && board[i][j] === (board[i][j + 2]) &&
+                    board[i][j] === (board[i][j + 3])) {
+                    winner();
+                }
+            }
+        }
+    }
+
+    for (var i = 0; i < board.length - 3; i++) {
+        for (var j = 0; j < 4; j++) {
+            if (board[i][j]) {
+                if (board[i][j] === (board[i + 1][j]) && board[i][j] === (board[i + 2][j]) &&
+                    board[i][j] === (board[i + 3][j])) {
+                    winner();
+                }
+                if (board[i][j] === (board[i + 1][j + 1]) && board[i][j] === (board[i + 2][j + 2]) &&
+                    board[i][j] === (board[i + 3][j + 3])) {
+                    winner();
+                }
+            }
+        }
+    }
+
+    for (var i = 0; i < board.length - 3; i++) {
+        for (var j = 3; j < board[i].length; j++) {
+            if (board[i][j]) {
+                if (board[i][j] === (board[i + 1][j - 1]) && board[i][j] === (board[i + 2][j - 2]) &&
+                    board[i][j] === (board[i + 3][j - 3])) {
+                    winner();
+                }
+            }
+        }
+    }
+}
+
+
+var checkDraw = function () {
+    for (var i = 0; i < board.board.length; i++) {
+        if (board.board[i].includes(null)) {
+            var isFull = false
+            return;
+        } else {
+            isFull = true;
+        }
+    }
+    if (isFull) {
+        alert("The board is full");
+    }
 }
 
 var render = function() {
