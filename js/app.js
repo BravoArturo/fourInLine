@@ -205,10 +205,10 @@ var render = function() {
 var init = function() {
     boardHTML = document.getElementById('board');
     turn = Math.random() > 0.5 ? ' yellow' : ' red';
+    render(); 
     if (load==="si"){
         loadGame();
     }
-    render(); 
     changeNameTurn();
     redirect();
     setInterval(counter2, 1000);
