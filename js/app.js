@@ -195,20 +195,20 @@ var render = function() {
             if (board[i][j]) html += ' ' + board[i][j]
             html += '"></div>';
         }
-        html += '</div>';     
+        html += '</div>';   
      }
      //this comment is beacuse is no working in github.
-    boardHTML.innerHTML = html;
+    boardHTML.innerHTML = html;  
     bindColumnHandlers();
 }
 
 var init = function() {
     boardHTML = document.getElementById('board');
     turn = Math.random() > 0.5 ? ' yellow' : ' red';
-    render(); 
     if (load==="si"){
         loadGame();
     }
+    render(); 
     changeNameTurn();
     redirect();
     setInterval(counter2, 1000);
