@@ -197,6 +197,7 @@ var render = function() {
         }
         html += '</div>';     
      }
+     //this comment is beacuse is no working in github.
     boardHTML.innerHTML = html;
     bindColumnHandlers();
 }
