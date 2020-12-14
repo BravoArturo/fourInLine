@@ -5,8 +5,6 @@ var games = null;
 var checkGame;
 
 var acceptButton = function() {
-    //aca tengo que ver como tomar el valor del checkbox seleccionado.
-    //currentButton = document.getElementById('l0').value;
     checkGame = document.getElementsByClassName("checkGame");
     for (i=0; i<checkGame.length; i++){
         if (checkGame[i].checked){

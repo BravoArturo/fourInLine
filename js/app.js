@@ -39,10 +39,6 @@ var loadGame = function() {
     playerTwo = gamesSaved.playerTwoL;
 }
 
-var reset = function(){
-    location.href="game.html";
-}
-
 var redirect2 = function() {
     location.href="index.html";
 }
@@ -65,7 +61,7 @@ counter1 = function() {
         min1=0;
         hour1++;
     }
-}
+    }
     counterP1.innerHTML = hour1+":"+min1+":"+sec1;
 }
 
@@ -82,7 +78,7 @@ counter2 = function() {
         min2=0;
         hour2++;
     }
-}
+    }
     counterP2.innerHTML = hour2+":"+min2+":"+sec2;
 }
       
@@ -108,11 +104,12 @@ var columnEventHandler = function(evt) {
     var columnId = evt.target.id.substr(1, 1);
     for (var i = 0; i < board[columnId].length; i++) {
         if (!board[columnId][i]) {
-            board[columnId][i] = turn; //si encuentro uno vacio relleno con el turno actual.
+            board[columnId][i] = turn;
             changeNameTurn();
+            toggleTurn();
             render();
             checkWin();
-            toggleTurn();
+            checkDraw();
             break; 
         }
     }
@@ -121,8 +118,8 @@ var columnEventHandler = function(evt) {
 var bindColumnHandlers = function() {
     columnsHTML = document.getElementsByClassName('column');
     for (var i = 0; i < columnsHTML.length; i++){
-    columnsHTML[i].onclick = columnEventHandler; //le agrega a todas las columnas el evento onclick.
-}   
+    columnsHTML[i].onclick = columnEventHandler;
+    }   
 }
 
 var winner = function() {
@@ -201,7 +198,7 @@ var render = function() {
         html += '</div>';     
      }
     boardHTML.innerHTML = html;
-    bindColumnHandlers(); //se ejecuta esto cada vez que se renderiza.
+    bindColumnHandlers();
 }
 
 var init = function() {
