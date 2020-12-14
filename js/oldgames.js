@@ -1,5 +1,5 @@
 var list = null;
-var estadoL
+var estadoL;
 var nameGame = null;
 var games = null;
 var checkGame;
