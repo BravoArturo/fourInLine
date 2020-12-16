@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Connect 4</title>
 </head>
 <body>
-    Hola
+    <form id="form" onsubmit="return sendForm();">
+        <div id=top>
+            <div id="left" class="lr">
+                <div id="name" class="column">
+                    <label for="nameI" class="formLabel">Names</label>
+                    <input type="text" class="formInput" id="nameI">
+                    <p id="nameError" class="error">The name must contain at least 3 characters</p>
+                </div>
+                <div id="lastName" class="column">
+                    <label for="lastNameI" class="formLabel">Last name</label>
+                    <input type="text" class="formInput" id="lastNameI">
+                    <p id="lastNameError" class="error">The last name must contain at least 3 characters</p>                    </div>
+                <div id="email" class="column">
+                    <label for="emailI" class="formLabel">Email</label>
+                    <input type="email" class="formInput" id="emailI">
+                    <p id="emailError" class="error">Please enter a correct email format</p>
+                </div>
+                <div id="age" class="column">
+                    <label for="ageI" class="formLabel">Age</label>
+                    <input type="text" class="formInput" id="ageI">
+                    <p id="ageError" class="error">Age cannot be less than 0 or greater than 100</p>
+                </div>
+            </div>
+            <div id="right" class="lr">
+                <div id="gender" class="column">
+                    <div id="genderRow" class="row">
+                        <label for="" class = "formLabel">Gender</label>
+                    </div>
+                    <div id="manRow" class="row">
+                        <input type="radio" name="gender2" id="man">
+                        <label for="man">Man</label>
+                    </div>
+                    <div id="womanRow" class="row">
+                        <input type="radio" name="gender2" id="woman">
+                        <label for="woman">Woman</label>
+                    </div>
+                    <div id="otherRow" class="row">
+                        <input type="radio" name="gender2" id="other">
+                        <label for="other">Other</label>
+                    </div>
+                    <p id="genderError" class="error">Select a Gender</p>
+                </div>
+                    <label for="ta" class="formLabel">Comment</label>
+                    <textarea id="ta" name="commentText"></textarea>
+                    <p id="commentError" class="error">Please leave a comment of no less than 20 characters</p>
+            <div Id="send button">
+                <input type="submit" value="Send" class="form_submit">
+                <button class="button" onclick="cancelButton()">Cancel</button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>

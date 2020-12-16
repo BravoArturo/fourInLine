@@ -12,7 +12,7 @@ var sec1 = 0;
 var hour2 = 0;
 var min2 = 0;
 var sec2 = 0;
-var estado = "No hay ganador";
+var estado = "There are not winner";
 var gamesSaved = null;
 var load = localStorage.getItem("load");
 var board = [
@@ -45,13 +45,13 @@ var redirect2 = function() {
 
 
 var redirect = function() {
-    redirect = document.getElementById('menu');
+    redirect = document.getElementById("menu");
     redirect.onclick = redirect2;
 }
 
 var counter1 = function() {
-    counterP1 = document.getElementById('counterP1');
-    if (turn === 'yellow'){
+    counterP1 = document.getElementById("counterP1");
+    if (turn === "yellow") {
     if (sec1 < 59){
         sec1++;
     }else if (sec1 == 59){
@@ -67,8 +67,8 @@ var counter1 = function() {
 }
 
 var counter2 = function() {
-    counterP2 = document.getElementById('counterP2');
-    if (turn === 'red'){
+    counterP2 = document.getElementById("counterP2");
+    if (turn === "red"){
     if (sec2 < 59){
         sec2++;
     }else if (sec2 == 59){
@@ -84,21 +84,21 @@ var counter2 = function() {
 }
       
 var changeNameTurn = function() {
-    turnp1 = document.getElementById('tyou');
-    turnp2 = document.getElementById('tai');
-    if (turn === 'yellow'){
+    turnp1 = document.getElementById("tyou");
+    turnp2 = document.getElementById("tai");
+    if (turn === "yellow") {
         turn2 = playerOne;
-        turnp1.innerHTML = "Es tu turno " + playerOne;
+        turnp1.innerHTML = "Is your turn " + playerOne;
         turnp2.innerHTML = playerTwo;
     }else if (turn === 'red'){
         turn2 = playerTwo;
-        turnp2.innerHTML = "Es tu turno " + playerTwo;
+        turnp2.innerHTML = "Is your turn " + playerTwo;
         turnp1.innerHTML = playerOne;
     }
 }
 
 var toggleTurn = function() {
-    turn = (turn === 'yellow') ? 'red' : 'yellow';
+    turn = (turn === "yellow") ? "red" : "yellow";
 }
 
 var columnEventHandler = function(evt) {
@@ -117,7 +117,7 @@ var columnEventHandler = function(evt) {
 }
 
 var bindColumnHandlers = function() {
-    columnsHTML = document.getElementsByClassName('column');
+    columnsHTML = document.getElementsByClassName("column");
     for (var i = 0; i < columnsHTML.length; i++){
     columnsHTML[i].onclick = columnEventHandler;
     }   
@@ -125,11 +125,11 @@ var bindColumnHandlers = function() {
 
 var winner = function() {
     if (turn === 'red'){
-        alert("El ganador es " + playerTwo);
-        estado = "El ganador fue: " + playerTwo;
+        alert("The winner is: " + playerTwo);
+        estado = "The winner was: " + playerTwo;
     }else{
-        alert("El ganador es " + playerOne);
-        estado = "El ganador fue: " + playerOne;
+        alert("The winner is: " + playerOne);
+        estado = "The winner was: " + playerOne;
     } 
 }
 
@@ -174,8 +174,8 @@ var checkWin = function () {
 
 
 var checkDraw = function () {
-    for (var i = 0; i < board.board.length; i++) {
-        if (board.board[i].includes(null)) {
+    for (var i = 0; i < board.length; i++) {
+        if (board[i].includes(null)) {
             var isFull = false
             return;
         } else {
@@ -198,15 +198,14 @@ var render = function() {
         }
         html += '</div>';   
      }
-     //this comment is beacuse is no working in github.
     boardHTML.innerHTML = html;  
     bindColumnHandlers();
 }
 
 var init = function() {
-    boardHTML = document.getElementById('board');
-    turn = Math.random() > 0.5 ? ' yellow' : ' red';
-    if (load==="si"){
+    boardHTML = document.getElementById("board");
+    turn = Math.random() > 0.5 ? "yellow" : "red";
+    if (load==="yes"){
         loadGame();
     }
     render(); 
@@ -214,7 +213,7 @@ var init = function() {
     redirect();
     setInterval(counter2, 1000);
     setInterval(counter1, 1000);
-    turn = 'red';
+    turn = "red";
 }
 
 window.onload = init;

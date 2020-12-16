@@ -11,7 +11,7 @@ var acceptButton = function() {
             localStorage.setItem("currentButton", checkGame[i].value);
         }
     }
-    localStorage.setItem("load", "si");
+    localStorage.setItem("load", "yes");
     location.href="game.html";
 }
 
@@ -20,7 +20,7 @@ var cancelButton = function() {
 }
 
 var getElements = function() {
-    list = document.getElementById('list');
+    list = document.getElementById("list");
 }
 
 var render1 = function() {
@@ -30,7 +30,7 @@ var render1 = function() {
             games = localStorage.key(i);
             gamesSaved =  JSON.parse(localStorage[games]);
             html +='<div><input type="radio" id="l'+i+'" class="checkGame" value="'+games+'">'+
-            '<label for="l'+i+'">'+games+ " El estado del juegos es: "+ gamesSaved.estadoL +'</label></div>';
+            '<label for="l'+i+'">'+games+ ". The state of the game is: "+ gamesSaved.estadoL +'</label></div>';
         }
     }
     list.innerHTML = html;

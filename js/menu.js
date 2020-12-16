@@ -16,22 +16,22 @@ var cancelButton = function() {
 
 var validateForm = function() {
     if (player1.value === ""){
-        alert("Debe ingresar el player 1");
+        alert("Must enter the player 1");
     }
     else if (player2.value === ""){
-        alert("Debe ingresar player 2");
+        alert("Must enter the player 2");
     }
     else if (player1.value.length < 3){
-        alert("El player 1 debe contener al menos 3 caracteres");
+        alert("Player 1 must contain at least 3 characters");
     }
     else if (player2.value.length < 3){
-        alert("El player 2 debe contener al menos 3 caracteres");
+        alert("Player 2 must contain at least 3 characters");
     }
     else if (gameName.value.length === ""){
-        alert("Debe ingresar el nombre de partida");
+        alert("You must enter the name of the game");
     }
     else if (gameName.value.length < 3){
-        alert("El nombre de partida debe contener al menos 3 caracteres");
+        alert("Game name must contain at least 3 characters");
     }
     else {
         playerOne = player1.value;
@@ -46,9 +46,9 @@ var validateForm = function() {
 }
 
 var getElements = function() {
-     player1 = document.getElementById('player1Input');
-     player2 = document.getElementById('player2Input');
-     gameName = document.getElementById('gameInput');
+     player1 = document.getElementById("player1Input");
+     player2 = document.getElementById("player2Input");
+     gameName = document.getElementById("gameInput");
 }
 
 var init = function() {
