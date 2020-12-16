@@ -6,10 +6,15 @@ var gameName = null;
 var game = null;
 var accept = null;
 
-seeOldGames = function() {
+var seeOldGames = function() {
     location.href="oldGames.html";
 }
-validateForm = function() {
+
+var cancelButton = function() {
+    location.href="index.html"
+}
+
+var validateForm = function() {
     if (player1.value === ""){
         alert("Debe ingresar el player 1");
     }
@@ -40,7 +45,7 @@ validateForm = function() {
     }
 }
 
-getElements = function() {
+var getElements = function() {
      player1 = document.getElementById('player1Input');
      player2 = document.getElementById('player2Input');
      gameName = document.getElementById('gameInput');

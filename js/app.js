@@ -40,15 +40,16 @@ var loadGame = function() {
 }
 
 var redirect2 = function() {
-    location.href="index.html";
+    location.href="play.html";
 }
+
 
 var redirect = function() {
     redirect = document.getElementById('menu');
     redirect.onclick = redirect2;
 }
 
-counter1 = function() {
+var counter1 = function() {
     counterP1 = document.getElementById('counterP1');
     if (turn === 'yellow'){
     if (sec1 < 59){
@@ -65,7 +66,7 @@ counter1 = function() {
     counterP1.innerHTML = hour1+":"+min1+":"+sec1;
 }
 
-counter2 = function() {
+var counter2 = function() {
     counterP2 = document.getElementById('counterP2');
     if (turn === 'red'){
     if (sec2 < 59){

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript" src="js/menu.js"></script>
+    <title>Connect 4</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="inputs">
+                <label for="player1Input" class="label">Player 1</label>
+                <input type="text" class="input" id="player1Input">
+                <label for="player2Input" class="label">Player 2</label>
+                <input type="text" class="input" id="player2Input">
+                <label for="gameInput" class="label">Match name</label>
+                <input type="text" class="input" id="gameInput">
+                <button id="accept" onclick="validateForm()" class="button">Accept</button>
+                <button onclick="cancelButton()" class="button">Cancel</button>
+            </div>
+        </div>
+        <div class="list">
+            <button class="button" id="oldGames" onclick="seeOldGames()">See old games</button>
+        </div>
+    </div>
+</body>
+</html>

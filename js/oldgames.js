@@ -15,11 +15,11 @@ var acceptButton = function() {
     location.href="game.html";
 }
 
-cancelButton = function() {
+var cancelButton = function() {
     location.href="index.html";
 }
 
-getElements = function() {
+var getElements = function() {
     list = document.getElementById('list');
 }
 
