@@ -1,3 +1,6 @@
+body {
+    height: 90vh;
+}
 #buttonContact {
     display: flex;
     align-items: center;
@@ -10,5 +13,6 @@
     border: 0.5px;
     background-color: #00AAD4;
     color: white;
+    margin-top: 10px;
     font-size: 24px;
 }
