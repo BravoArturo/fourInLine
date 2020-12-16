@@ -109,7 +109,7 @@ var columnEventHandler = function(evt) {
             changeNameTurn();
             toggleTurn();
             render();
-            checkWin();
+            setTimeout('checkWin()', 1000);
             checkDraw();
             break; 
         }
@@ -139,7 +139,7 @@ var checkWin = function () {
             if (board[i][j]) {
                 if (board[i][j] === (board[i][j + 1]) && board[i][j] === (board[i][j + 2]) &&
                     board[i][j] === (board[i][j + 3])) {
-                    winner();
+                        winner();
                 }
             }
         }
@@ -150,11 +150,11 @@ var checkWin = function () {
             if (board[i][j]) {
                 if (board[i][j] === (board[i + 1][j]) && board[i][j] === (board[i + 2][j]) &&
                     board[i][j] === (board[i + 3][j])) {
-                    winner();
+                        winner();
                 }
                 if (board[i][j] === (board[i + 1][j + 1]) && board[i][j] === (board[i + 2][j + 2]) &&
                     board[i][j] === (board[i + 3][j + 3])) {
-                    winner();
+                        winner();
                 }
             }
         }
@@ -165,7 +165,7 @@ var checkWin = function () {
             if (board[i][j]) {
                 if (board[i][j] === (board[i + 1][j - 1]) && board[i][j] === (board[i + 2][j - 2]) &&
                     board[i][j] === (board[i + 3][j - 3])) {
-                    winner();
+                        winner();
                 }
             }
         }
