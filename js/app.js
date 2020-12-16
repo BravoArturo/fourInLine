@@ -12,7 +12,9 @@ var sec1 = 0;
 var hour2 = 0;
 var min2 = 0;
 var sec2 = 0;
+var reset = null;
 var estado = "There are not winner";
+var alertBoardFull = null;
 var gamesSaved = null;
 var load = localStorage.getItem("load");
 var board = [
@@ -25,6 +27,25 @@ var board = [
     [null, null, null, null, null, null]
 ];
 
+var playAgain = function() {
+    board = [
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null],
+        [null, null, null, null, null, null]
+    ];
+    render();
+    sec1 = 0;
+    min1 = 0;
+    hour1 = 0;
+    sec2 = 0;
+    min2 = 0;
+    hour2 = 0;
+    reset.style.display = "none";
+}
 var loadGame = function() {
     gamesSaved = JSON.parse(localStorage[localStorage.getItem("currentButton")]);
     playerOne = gamesSaved.playerOneL;
@@ -88,12 +109,12 @@ var changeNameTurn = function() {
     turnp2 = document.getElementById("tai");
     if (turn === "yellow") {
         turn2 = playerOne;
-        turnp1.innerHTML = "Is your turn " + playerOne;
-        turnp2.innerHTML = playerTwo;
-    }else if (turn === 'red'){
-        turn2 = playerTwo;
         turnp2.innerHTML = "Is your turn " + playerTwo;
         turnp1.innerHTML = playerOne;
+    }else if (turn === 'red'){
+        turn2 = playerTwo;
+        turnp1.innerHTML = "Is your turn " + playerOne;
+        turnp2.innerHTML = playerTwo;
     }
 }
 
@@ -110,7 +131,7 @@ var columnEventHandler = function(evt) {
             toggleTurn();
             render();
             setTimeout('checkWin()', 1000);
-            checkDraw();
+            setTimeout('checkDraw()', 500);
             break; 
         }
     }
@@ -124,12 +145,14 @@ var bindColumnHandlers = function() {
 }
 
 var winner = function() {
-    if (turn === 'red'){
-        alert("The winner is: " + playerTwo);
-        estado = "The winner was: " + playerTwo;
-    }else{
+    if (turn === "red"){
         alert("The winner is: " + playerOne);
         estado = "The winner was: " + playerOne;
+        return;
+    }else {
+        alert("The winner is: " + playerTwo);
+        estado = "The winner was: " + playerTwo;
+        return;
     } 
 }
 
@@ -183,7 +206,9 @@ var checkDraw = function () {
         }
     }
     if (isFull) {
-        alert("The board is full");
+        alert("Board Full");
+        reset.style.display = "flex";
+        return;
     }
 }
 
@@ -203,6 +228,7 @@ var render = function() {
 }
 
 var init = function() {
+    reset = document.getElementById("reset");
     boardHTML = document.getElementById("board");
     turn = Math.random() > 0.5 ? "yellow" : "red";
     if (load==="yes"){

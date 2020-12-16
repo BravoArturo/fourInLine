@@ -16,7 +16,7 @@ var acceptButton = function() {
 }
 
 var cancelButton = function() {
-    location.href="index.html";
+    location.href="play.html";
 }
 
 var getElements = function() {

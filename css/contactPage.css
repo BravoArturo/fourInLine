@@ -16,10 +16,11 @@ body {
 }
 
 .error {
-    font-size: x-small;
+    display: flex;
+    margin-top: -1px;
     color: red;
     display: none;
-    font-size: large;
+    font-size: medium;
 }
 
 .input {
@@ -34,7 +35,6 @@ body {
     justify-content:center;
     flex-direction:column;
     border:solid #00AAD4;
-    margin:5px;
     padding:5px;
     font-size: large;
 }

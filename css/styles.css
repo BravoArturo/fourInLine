@@ -4,7 +4,12 @@ body {
     align-items: center;
     background-image: url("../img/icon.jpg");
     background-size:cover;
-    
+    flex-direction: column;
+}
+
+#reset {
+    display: none;
+    font-size: 24px;
 }
 
 #oldGames {
