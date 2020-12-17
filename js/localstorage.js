@@ -1,4 +1,5 @@
 var save = function(){
+
     var game = {
         playerOneL: playerOne,
         playerTwoL: playerTwo,
@@ -11,6 +12,7 @@ var save = function(){
         boardL: board, 
         estadoL: estado  
     }
+
     localStorage.setItem("Game: " + localStorage.getItem("gameName"), JSON.stringify(game));
     console.log(game);
 }

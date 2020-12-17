@@ -3,6 +3,7 @@ console.log("Hola");
 var cancelButton = function() {
     location.href = "index.html"
 }
+
 var sendForm = function() {
     
     if (nameI.value === null || nameI.value === "" || nameI.value.length<3) {
@@ -57,10 +58,10 @@ var sendForm = function() {
 
     return false;
 }
+
 var validateEmail = function() {
     expresion = /\w+@+\w+\.+[a-z]/
 }
-
 
 var getElemtns = function() {
      form = document.getElementById("form");

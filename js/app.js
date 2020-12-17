@@ -46,6 +46,7 @@ var playAgain = function() {
     hour2 = 0;
     reset.style.display = "none";
 }
+
 var loadGame = function() {
     gamesSaved = JSON.parse(localStorage[localStorage.getItem("currentButton")]);
     playerOne = gamesSaved.playerOneL;
