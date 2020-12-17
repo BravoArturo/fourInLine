@@ -1,221 +1,219 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../img/icon.jpg");
-    background-size:cover;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/icon.jpg");
+  background-size: cover;
+  flex-direction: column;
 }
 
 #reset {
-    display: none;
-    font-size: 24px;
+  display: none;
+  font-size: 24px;
 }
 
 #oldGames {
-    width: 86vh;
+  width: 86vh;
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #container {
-    display : flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
 
 #main {
-    display: flex;
-    flex-direction: column;
-    height:400px ;
-    width: 500px;
-
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 500px;
 }
 
 #top {
-    display: flex;
-    height: 80%;
-    width: 100%;
+  display: flex;
+  height: 80%;
+  width: 100%;
 }
 
 #bot {
-    display: flex;
-    flex-direction: column;
-    height: 20%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 100%;
 }
 
-#left { 
-    display: flex;
-    height: 100%;
-    width: 10%;
-    background: #00AAD4;
-    border-radius: 40px 0px 0px 0px;
+#left {
+  display: flex;
+  height: 100%;
+  width: 10%;
+  background: #00aad4;
+  border-radius: 40px 0px 0px 0px;
 }
 
 .board {
-    display: flex;
-    height: 100%;
-    width: 80%;
-    background: #0088AA;
+  display: flex;
+  height: 100%;
+  width: 80%;
+  background: #0088aa;
 }
 
 #right {
-    display: flex;
-    height: 100%;
-    width: 10%;
-    background: #00AAD4;
-    border-radius: 0px 40px 0px 0px; /* top right bot left*/
+  display: flex;
+  height: 100%;
+  width: 10%;
+  background: #00aad4;
+  border-radius: 0px 40px 0px 0px; /* top right bot left*/
 }
 
 #up {
-    display: flex;
-    height: 20%;
-    width: 100%;
-    background: #006680;
+  display: flex;
+  height: 20%;
+  width: 100%;
+  background: #006680;
 }
 
 #down {
-    display: flex;
-    height: 80%;
-    width: 100%;
-    background: black;
+  display: flex;
+  height: 80%;
+  width: 100%;
+  background: black;
 }
 
 .alingCounter {
-    color: wheat;
+  color: wheat;
 }
 
 .board .column {
-    display: flex;
-   justify-content: space-evenly;
-   flex-direction: column;
-   align-items: center;
-    width: 14%;
-    height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 14%;
+  height: 100%;
 }
 
 .board .column .row {
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    background-color: black;
-    border-radius: 50%;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
 }
 
 .board .column .row.red {
-    background-color: red;
+  background-color: red;
 }
 
 .board .column .row.yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .column:hover {
-    background:wheat;
-    cursor: pointer;
+  background: wheat;
+  cursor: pointer;
 }
 
-#you, #ai {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 40%;
+#you,
+#ai {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
 }
 
 #ai {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 #go {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
 }
 
 .circle {
-    height: 40px;
-    width: 40px;
-    border-radius: 50px;
-    justify-content: center;
-    align-items: center;
-    background: yellow;
-
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  background: yellow;
 }
 
 .yellow {
-    background: red;
+  background: red;
 }
 
 #go {
-    font-weight: bold;
-    align-self: center;
-    text-align: center;
-    margin-left: 15px;
-    color: #7d6400;
-    font-size: 13px;
-    background-color: #ffcc00;
-    height: 20px;
-    width: 25px;
-    position: relative;
-    float: left;
-    text-align: right;
-    padding: 10px 8px 5px 5px;
-    margin: 0 0 4px 30px;
+  font-weight: bold;
+  align-self: center;
+  text-align: center;
+  margin-left: 15px;
+  color: #7d6400;
+  font-size: 13px;
+  background-color: #ffcc00;
+  height: 20px;
+  width: 25px;
+  position: relative;
+  float: left;
+  text-align: right;
+  padding: 10px 8px 5px 5px;
+  margin: 0 0 4px 30px;
 }
 
 #go:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 38px;
-    width: 0;
-    height: 0;
-    border-top: 18px solid transparent;
-    border-right: 18px solid #ffcc00;
-    border-bottom: 18px solid transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 38px;
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-right: 18px solid #ffcc00;
+  border-bottom: 18px solid transparent;
 }
 
 .button {
-    border-radius: 40px;
-    border: 0.5px;
-    background-color: #00AAD4;
-    color: white;
+  border-radius: 40px;
+  border: 0.5px;
+  background-color: #00aad4;
+  color: white;
 }
 
 .input {
-    border-radius: 5px;
-    border: 0.5px;
+  border-radius: 5px;
+  border: 0.5px;
 }
 
 .oldGamesButton {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-@media (max-width: 500px){
-    #main {
-        height: 300px;
-        width: 400px;
-    }
+@media (max-width: 500px) {
+  #main {
+    height: 300px;
+    width: 400px;
+  }
 
-    .row {
-        display: flex;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        background: white;
-        border-radius: 50%;
-    }
+  .row {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    background: white;
+    border-radius: 50%;
+  }
 }

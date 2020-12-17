@@ -30,7 +30,7 @@ var sendForm = function() {
         ageError.style.display = "none";
     }
 
-    if (man.checked == false && woman.checked == false && other.checked == false) {
+    if (man.checked === false && woman.checked === false && other.checked === false) {
         genderError.style.display = "block";
     }else {
         genderError.style.display = "none";
@@ -42,18 +42,18 @@ var sendForm = function() {
         commentError.style.display = "none";
     }
     
-    if (man.checked == true) {
+    if (man.checked === true) {
         genderC = "Hombre";
-    }else if (woman.checked == true) {
+    }else if (woman.checked === true) {
         genderC = "Mujer";
     }else {
         genderC = "Otro";
     }
 
-    if (nameError.style.display == "none" && lastNameError.style.display == "none" && emailError.style.display == "none" && ageError.style.display == "none" && genderError.style.display == "none" &&commentError.style.display == 'none') {
+    if (nameError.style.display === "none" && lastNameError.style.display === "none" && emailError.style.display === "none" && ageError.style.display === "none" && genderError.style.display === "none" &&commentError.style.display === "none") {
         console.log("The informacion was send");
     }else {
-        console.log('Correct the fields and you will get your data');
+        console.log("Correct the fields and you will get your data");
     }
 
     return false;

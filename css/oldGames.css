@@ -1,10 +1,10 @@
 #list {
-        display:flex;
-        background-color: rgba(52, 52, 52, 0.8);
-        color: white;
-        justify-content:center;
-        flex-direction:column;
-        border:solid #00AAD4;
-        margin:5px;
-        padding:5px;
+  display: flex;
+  background-color: rgba(52, 52, 52, 0.8);
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  border: solid #00aad4;
+  margin: 5px;
+  padding: 5px;
 }

@@ -1,14 +1,14 @@
 'use strict'
+console.log("Hello");
 var list = null;
-var estadoL;
 var nameGame = null;
 var games = null;
 var gamesSaved = null;
-var checkGame;
+var checkGame = null;
 
 var acceptButton = function() {
     checkGame = document.getElementsByClassName("checkGame");
-    for (i=0; i<checkGame.length; i++){
+    for ( var i=0; i<checkGame.length; i++){
         if (checkGame[i].checked){
             localStorage.setItem("currentButton", checkGame[i].value);
         }
@@ -28,7 +28,7 @@ var getElements = function() {
 var render1 = function() {
     let html = '';
     for (let i = 0; i < localStorage.length; i++){
-        if (localStorage.key(i).includes('Game:') == true){
+        if (localStorage.key(i).includes("Game:") == true){
             games = localStorage.key(i);
             gamesSaved =  JSON.parse(localStorage[games]);
             html +='<div><input type="radio" id="l'+i+'" class="checkGame" value="'+games+'">'+
