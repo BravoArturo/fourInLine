@@ -3,6 +3,7 @@ var list = null;
 var estadoL;
 var nameGame = null;
 var games = null;
+var gamesSaved = null;
 var checkGame;
 
 var acceptButton = function() {
