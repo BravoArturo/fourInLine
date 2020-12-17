@@ -149,10 +149,12 @@ var winner = function() {
     if (turn === "red"){
         alert("The winner is: " + playerOne);
         estado = "The winner was: " + playerOne;
+        reset.style.display = "flex";
         return;
     }else {
         alert("The winner is: " + playerTwo);
         estado = "The winner was: " + playerTwo;
+        reset.style.display = "flex";
         return;
     } 
 }
