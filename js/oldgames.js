@@ -1,3 +1,4 @@
+'use strict'
 var list = null;
 var estadoL;
 var nameGame = null;
