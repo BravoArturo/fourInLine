@@ -1,4 +1,5 @@
 'use strict'
+//The problem was fixed i had to delete a script in "game.html"
 console.log("Hello");
 var list = null;
 var nameGame = null;
